@@ -32,17 +32,12 @@ startButton.addEventListener("click", async () => {
         const offer = await peerConnection.createOffer();
         await peerConnection.setLocalDescription(offer);
 
-        // Compartilhar a descrição da oferta com outros participantes (por exemplo, usando uma conexão WebSocket)
         const offerDescription = JSON.stringify(
             peerConnection.localDescription
         );
         console.log("Descrição da oferta:", offerDescription);
 
-        // Para estabelecer uma conexão completa, você precisa trocar descrições e configurações com o outro cliente.
-        // Implemente a lógica para enviar a descrição da oferta ao cliente remoto e receber a descrição da resposta.
-        // Em seguida, defina a descrição da resposta usando `setRemoteDescription` e a conexão WebRTC será estabelecida.
-
-        const socket = new WebSocket("ws://seu-servidor-de-sinalizacao.com");
+        const socket = new WebSocket("ws://localhost:8080");
 
         socket.onopen = async () => {
             // Enviar a descrição da oferta gerada para o receptor

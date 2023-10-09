@@ -1,17 +1,18 @@
 {
   "name": "mao",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este projeto é um exemplo simples de como criar uma aplicação de compartilhamento de tela em tempo real usando a tecnologia WebRTC (Web Real-Time Communication). Com este projeto, você pode compartilhar a tela de um dispositivo com outros dispositivos em uma rede local, permitindo que os outros visualizem a tela compartilhada em tempo real.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "socket.io": "^4.7.2"
+    "socket.io": "^4.7.2",
+    "websocket": "^1.0.34"
   }
 }
